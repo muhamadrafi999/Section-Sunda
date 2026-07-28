@@ -27,42 +27,20 @@ function AttendanceCard() {
           <p className="font-body text-[17px] text-[#5C4B42]">
             mari bertemu disana ;
           </p>
-          <button
-            className="
-              mt-6
-              w-43.5
-              h-8.75
-              rounded-full
-              bg-[#7D2424]
-              text-white
-              font-body
-              text-[15px]
-            "
-          >
+          <button className="mt-6 w-43.5 h-8.75 rounded-full bg-[#7D2424] text-white font-body text-[15px]">
             Ubah
           </button>
         </div>
         <img
           src={LeftFlower}
           alt="Left Flower"
-          className="
-            absolute
-            bottom-0
-            -left-8
-            w-20.5
-          "
+          className="absolute bottom-0 -left-8 w-20.5 animate-left-flower"
         />
         <img
           src={RightFlower}
           alt="Right Flower"
-          className="
-            absolute
-            bottom-0
-            -right-8
-            w-20.5
-          "
+          className="absolute bottom-0 -right-8 w-20.5 animate-right-flower"
         />
-
       </div>
     </div>
   );

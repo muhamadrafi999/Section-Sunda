@@ -4,3 +4,128 @@
   --font-title: "Great Vibes", cursive;
   --font-body: "Cormorant Garamond", serif;
 }
+
+@keyframes swayLeft {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-3deg) translateY(-2px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(0);
+  }
+  75% {
+    transform: rotate(3deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes swayLeft {
+  from {
+    transform: rotate(-3deg);
+  }
+  to {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes swayRight {
+  from {
+    transform: rotate(3deg);
+  }
+  to {
+    transform: rotate(-3deg);
+  }
+}
+
+.animate-left-flower {
+  animation: swayLeft 4s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+.animate-right-flower {
+  animation: swayRight 4s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes swayTopFlower {
+  from {
+    transform: rotate(-4deg);
+  }
+  to {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes swayBottomFlower {
+  from {
+    transform: rotate(4deg);
+  }
+  to {
+    transform: rotate(-4deg);
+  }
+}
+
+.animate-top-flower {
+  animation: swayTopFlower 4s ease-in-out infinite alternate;
+  transform-origin: bottom left;
+}
+
+.animate-bottom-flower {
+  animation: swayBottomFlower 4.5s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes swayTallFlower {
+  0% {
+    transform: rotate(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(4deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  } 
+}
+
+.animate-tall-flower {
+  animation: swayTallFlower 5s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes swayLeftBush {
+  0% {
+    transform: rotate(-4deg) translateY(0);
+  }
+  50% {
+    transform: rotate(3deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+}
+
+@keyframes swayRightFlower {
+  0% {
+    transform: rotate(3deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-3deg) translateY(-2px);
+  }
+  100% {
+    transform: rotate(3deg) translateY(0);
+  }
+}
+
+.animate-left-bush {
+  animation: swayLeftBush 5.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-right-flower {
+  animation: swayRightFlower 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
