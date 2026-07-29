@@ -10,16 +10,20 @@ import ThanksComp from "../components/ThanksComp";
 
 function Home() {
   return (
-    <div className="bg-[#F7F0DE]">
-      <HeroMobileComp />
-      <VerseComp />
-      <ReceptionComp />
-      <DressCodeComp />
-      <AttendanceCard />
-      <PortraitComp />
-      <LiveFootageComp />
-      <InstagramFilterComp />
-      <ThanksComp />
+    <div className="min-h-screen bg-[#F7F0DE] flex justify-center py-10">
+      <div className="w-[390px] bg-[#F7F0DE] overflow-hidden shadow-xl">
+
+        <HeroMobileComp />
+        <VerseComp />
+        <ReceptionComp />
+        <DressCodeComp />
+        <AttendanceCard />
+        <PortraitComp />
+        <LiveFootageComp />
+        <InstagramFilterComp />
+        <ThanksComp />
+
+      </div>
     </div>
   );
 }

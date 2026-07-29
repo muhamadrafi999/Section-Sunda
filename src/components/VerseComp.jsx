@@ -4,48 +4,38 @@ import RightFlower from "../assets/images/el-flower-bucket-8.png";
 
 function VerseComp() {
   return (
-    <section className="bg-[#F7F0DE] py-24 flex justify-center overflow-hidden">
-
-      <div className="relative w-[430px] h-[470px]">
-
+    <section className="bg-[#F7F0DE] py-14 flex justify-center overflow-hidden">
+      <div className="relative w-[390px] h-[500px]">
         <img
           src={LeftFlower}
           alt=""
-          className="absolute right-35 bottom-22 w-110 z-10"
+          className="absolute -left-[95px] top-[35px] w-[250px] z-10 animate-left-bush"
         />
-
         <img
           src={Paper}
           alt=""
-          className="absolute left-10 top-16 w-150 z-20"
+          className="absolute left-1/2 top-[45px] -translate-x-1/2 w-[365px] z-20"
         />
-
-        <div className="absolute left-[118px] top-[105px] w-[290px] z-30 flex flex-col items-center">
-
-          <p className="font-body text-[15px] leading-[1.85] text-[#5C4036] text-center">
-            Dan di antara tanda-tanda (Kebesaran)-Nya ialah Dia
-            menciptakan pasangan-pasangan untukmu dari jenismu
-            sendiri, agar kamu cenderung dan merasa tenteram
-            kepadanya, dan Dia menjadikan di antaramu rasa kasih
-            dan sayang. Sungguh, pada demikian itu benar-benar
-            terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
-            berpikir.
-          </p>
-
-          <p className="font-body text-[16px] text-[#5C4036] mt-6">
-            (QS. Ar-Rum ayat 21)
-          </p>
-
+        <div className="absolute left-1/2 top-[80px] -translate-x-1/2 w-[235px] z-30">
+            <p className="font-body text-[13px] leading-[1.65] text-[#5C4036] text-center">
+                Dan di antara tanda-tanda (Kebesaran)-Nya ialah Dia
+                menciptakan pasangan-pasangan untukmu dari
+                jenismu sendiri, agar kamu cenderung dan merasa
+                tenteram kepadanya, dan Dia menjadikan di antaramu
+                rasa kasih dan sayang. Sungguh, pada demikian itu
+                benar-benar terdapat tanda-tanda (kebesaran Allah)
+                bagi kaum yang berpikir.
+            </p>
+            <p className="font-body text-[14px] text-[#5C4036] text-center mt-2">
+                (QS. Ar-Rum ayat 21)
+            </p>
         </div>
-
         <img
           src={RightFlower}
           alt=""
-          className="absolute left-95 bottom-15 w-40 z-40"
+          className="absolute right-[0px] bottom-[130px] w-[130px] z-40 animate-right-flower"
         />
-
       </div>
-
     </section>
   );
 }

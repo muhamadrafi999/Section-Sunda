@@ -6,49 +6,25 @@ import BlueFlower from "../assets/images/blue-flower.png";
 
 function ThanksComp() {
   return (
-    <section className="bg-[#F7F0DE] flex justify-center py-12 overflow-hidden">
+    <section className="bg-[#F7F0DE] py-16 flex justify-center overflow-hidden">
 
-      <div className="relative w-[390px] h-[610px]">
+      <div className="relative w-[390px] h-[600px]">
 
         <img
           src={Pattern}
           alt=""
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[390px] z-10"
+          className="absolute -top-50 left-1/2 -translate-x-1/2 w-[330px] z-30"
         />
 
-        <div className="absolute left-1/2 top-[90px] -translate-x-1/2 w-[390px] h-[420px] bg-[#742323] rounded-t-[220px] z-20 shadow-[0_10px_20px_rgba(0,0,0,0.18)]">
+        <div className="absolute top-[60px] left-1/2 -translate-x-1/2 w-[350px] h-[445px] rounded-t-[190px] bg-[#742323] shadow-[0_12px_20px_rgba(0,0,0,0.18)] z-20">
 
-          <img
-            src={BlueFlower}
-            alt=""
-            className="absolute -left-2 top-[55px] w-11 z-30"
-          />
+          <div className="absolute left-1/2 top-[58px] -translate-x-1/2 w-[250px]">
 
-          <img
-            src={SunFlower}
-            alt=""
-            className="absolute left-4 top-[72px] w-14 z-40"
-          />
-
-          <img
-            src={TwoRedFlower}
-            alt=""
-            className="absolute left-10 top-[88px] w-16 z-50"
-          />
-
-          <img
-            src={Leaf}
-            alt=""
-            className="absolute -right-9 bottom-0 w-36 z-40"
-          />
-
-          <div className="absolute top-[95px] left-1/2 -translate-x-1/2 w-[300px]">
-
-            <h1 className="font-title text-[44px] text-white text-center">
+            <h1 className="font-title text-[46px] text-white text-center">
               Terimakasih
             </h1>
 
-            <p className="font-body text-[15px] leading-[1.9] text-white text-center mt-10">
+            <p className="font-body text-[14px] leading-[1.8] text-white text-center mt-8">
               Kami mengucapkan terimakasih kepada
               Bapak/Ibu/Saudara yang telah menghadiri
               seluruh rangkaian acara pernikahan kami.
@@ -62,6 +38,30 @@ function ThanksComp() {
             </p>
 
           </div>
+
+          <img
+            src={BlueFlower}
+            alt=""
+            className="absolute left-[3px] top-[88px] w-10 z-20"
+          />
+
+          <img
+            src={SunFlower}
+            alt=""
+            className="absolute left-[3px] top-[108px] w-17 z-30"
+          />
+
+          <img
+            src={TwoRedFlower}
+            alt=""
+            className="absolute left-[3px] top-[126px] w-13 z-40"
+          />
+
+          <img
+            src={Leaf}
+            alt=""
+            className="absolute right-[-24px] bottom-0 w-25 z-50"
+          />
 
         </div>
 

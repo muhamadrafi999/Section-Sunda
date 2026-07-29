@@ -2,56 +2,73 @@ import Video from "../assets/images/foto-vidio.png";
 import TopRightFlower from "../assets/images/top-right-flower.png";
 import BottomRightFlower from "../assets/images/bottom-right-flower.png";
 import BottomLeftFlower from "../assets/images/bottom-left-flower.png";
-// import {Video, TopRightFlower, BottomRightFlower, BottomLeftFlower } from "../assets/images"
 
 function LiveFootageComp() {
   return (
-    <section className="bg-[#F7F0DE] py-24">
-      <div className="flex flex-col items-center">
+    <section className="bg-[#F7F0DE] py-16">
+
+      <div className="w-[390px] mx-auto flex flex-col items-center">
+
         <h1 className="font-title text-[42px] text-[#7B3B3B]">
           Live Streaming
         </h1>
-        <p className="font-body text-[20px] text-[#7B3B3B] mt-2 mb-4">
+
+        <p className="font-body text-[20px] text-[#7B3B3B] mt-2 mb-5">
           Tambahkan kalimat
         </p>
-        <div className="relative w-97.5">
+
+        <div className="relative w-[315px]">
+
           <img
             src={Video}
-            alt="Video"
-            className="w-full rounded-sm"
+            alt=""
+            className="w-full rounded-md"
           />
+
           <img
             src={TopRightFlower}
-            alt="Top Right Flower"
-            className="absolute top-1 -right-6 w-28.75 animate-top-flower"
+            alt=""
+            className="absolute top-1 -right-5 w-[88px] animate-top-flower"
           />
+
           <img
             src={BottomRightFlower}
-            alt="Bottom Right Flower"
-            className="absolute bottom-0 -right-9 w-28 animate-bottom-flower"
+            alt=""
+            className="absolute bottom-0 -right-7 w-[88px] animate-bottom-flower"
           />
+
         </div>
-      </div>
-      <div className="flex flex-col items-center mt-18">
-        <h1 className="font-title text-[42px] text-[#7B3B3B]">
-          Our Footage
-        </h1>
-        <p className="font-body text-[20px] text-[#7B3B3B] mt-2 mb-4">
-          Tambahkan kalimat
-        </p>
-        <div className="relative w-97.5">
-          <img
-            src={Video}
-            alt="Video"
-            className="w-full rounded-sm"
-          />
-          <img
-            src={BottomLeftFlower}
-            alt="Bottom Left Flower"
-            className="absolute -bottom-8 -left-8 w-30 animate-top-flower"
-          />
+
+        <div className="flex flex-col items-center mt-16">
+
+          <h1 className="font-title text-[42px] text-[#7B3B3B]">
+            Our Footage
+          </h1>
+
+          <p className="font-body text-[20px] text-[#7B3B3B] mt-2 mb-5">
+            Tambahkan kalimat
+          </p>
+
+          <div className="relative w-[315px]">
+
+            <img
+              src={Video}
+              alt=""
+              className="w-full rounded-md"
+            />
+
+            <img
+              src={BottomLeftFlower}
+              alt=""
+              className="absolute -bottom-7 -left-7 w-[95px] animate-top-flower"
+            />
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }
