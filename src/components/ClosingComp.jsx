@@ -9,10 +9,9 @@ import Flower4 from "../assets/images/el-flower-bucket-18.png";
 import Flower5 from "../assets/images/el-flower-22.png";
 import Flower6 from "../assets/images/el-flower-27.png";
 
-
 function ClosingComp() {
   return (
-    <section className="relative w-full min-h-[680px] overflow-hidden bg-[#F7F0DE] py-20">
+    <section className="relative w-full min-h-170 overflow-hidden bg-[#F7F0DE] py-20">
         <img
             src={BgOverlay}
             alt=""
@@ -30,54 +29,54 @@ function ClosingComp() {
         />
         <div className="relative z-20 flex flex-col items-center mt-50">
             <p className="font-body text-[18px] text-[#6E4A42]">
-            Wedding Invitation
+                Wedding Invitation
             </p>
             <h1 className="font-title text-[44px] text-[#6C2E37] mt-2">
-            Bryan & Anne
+                Bryan & Anne
             </h1>
             <p className="font-body text-[18px] text-[#6E4A42] mt-2">
-            #PromDateToLifeMate
+                #PromDateToLifeMate
             </p>
         </div>
         <img
             src={Bush}
             alt=""
-            className="absolute -left-47 bottom-0 w-[430px] z-50"
+            className="absolute -left-47 bottom-0 w-107.5 z-50"
         />
         <img
             src={Flower1}
             alt=""
-            className="absolute left-13 bottom-0 w-[105px] z-[60] animate-left-bush"
+            className="absolute left-13 bottom-0 w-26.25 z-60 animate-left-bush"
         />
         <img
             src={Flower2}
             alt=""
-            className="absolute right-13 bottom-0 w-[105px] z-[60] animate-left-bush"
+            className="absolute right-13 bottom-0 w-26.25 z-60 animate-left-bush"
         />
         <img
             src={Flower3}
             alt=""
-            className="absolute right-22 bottom-0 w-[80px] z-[60] animate-left-bush"
+            className="absolute right-22 bottom-0 w-20 z-60 animate-left-bush"
         />
         <img
             src={Flower4}
             alt=""
-            className="absolute right-0 bottom-0 w-[100px] z-[60] animate-left-bush"
+            className="absolute right-0 bottom-0 w-25 z-60 animate-left-bush"
         />
         <img
             src={Flower5}
             alt=""
-            className="absolute right-77 bottom-0 w-[130px] z-[60] animate-left-bush"
+            className="absolute right-77 bottom-0 w-32.5 z-60 animate-left-bush"
         />
         <img
             src={Flower6}
             alt=""
-            className="absolute left-10 bottom-0 w-[60px] z-[60] animate-left-bush"
+            className="absolute left-10 bottom-0 w-15 z-60 animate-left-bush"
         />
         <img
             src={Bush}
             alt=""
-            className="absolute -right-47 bottom-0 w-[430px] scale-x-[-1] z-50"
+            className="absolute -right-47 bottom-0 w-107.5 scale-x-[-1] z-50"
         />
     </section>
   );

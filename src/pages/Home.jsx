@@ -1,3 +1,5 @@
+import Reveal from "../components/Reveal";
+import InvitationLayout from "../layouts/InvitationLayout";
 import HeroMobileComp from "../components/HeroMobileComp";
 import VerseComp from "../components/VerseComp";
 import BrideGroomComp from "../components/BrideGroomComp";
@@ -17,26 +19,73 @@ import ClosingComp from "../components/ClosingComp";
 
 function Home() {
   return (
-    <div className="min-h-screen bg-[#F7F0DE] flex justify-center py-10">
-      <div className="w-[390px] bg-[#F7F0DE] overflow-hidden shadow-xl">
+    <InvitationLayout>
+
+      <Reveal direction="up">
         <HeroMobileComp />
+      </Reveal>
+
+      <Reveal direction="up" delay={100}>
         <VerseComp />
+      </Reveal>
+
+      <Reveal direction="left" delay={100}>
         <BrideGroomComp />
+      </Reveal>
+
+      <Reveal direction="right" delay={100}>
         <OurStoryComp />
+      </Reveal>
+
+      <Reveal direction="up">
         <CountdownComp />
+      </Reveal>
+
+      <Reveal direction="left">
         <WeddingDayComp />
+      </Reveal>
+
+      <Reveal direction="right">
         <ReceptionComp />
+      </Reveal>
+
+      <Reveal direction="up">
         <DressCodeComp />
+      </Reveal>
+
+      <Reveal direction="left">
         <AttendanceCard />
+      </Reveal>
+
+      <Reveal direction="right">
         <PortraitComp />
+      </Reveal>
+
+      <Reveal direction="up">
         <LiveFootageComp />
+      </Reveal>
+
+      <Reveal direction="left">
         <InstagramFilterComp />
+      </Reveal>
+
+      <Reveal direction="right">
         <WeddingGiftComp />
+      </Reveal>
+
+      <Reveal direction="up">
         <WishComp />
+      </Reveal>
+
+      <Reveal direction="left">
         <ThanksComp />
+      </Reveal>
+
+      <Reveal direction="up">
         <ClosingComp />
-      </div>
-    </div>
+      </Reveal>
+
+    </InvitationLayout>
   );
 }
 
