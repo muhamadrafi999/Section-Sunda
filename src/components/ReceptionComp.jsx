@@ -45,7 +45,7 @@ function ReceptionComp() {
         <img
           src={RightTree}
           alt=""
-          className="absolute right-[-115px] bottom-2 w-[250px] z-0"
+          className="absolute right-[-115px] bottom-2 w-[250px] z-0 animate-left-bush"
         />
 
         <img
@@ -57,19 +57,19 @@ function ReceptionComp() {
         <img
           src={BlueFlower}
           alt=""
-          className="absolute right-[78px] bottom-[12px] w-[56px] z-10"
+          className="absolute right-[78px] bottom-[12px] w-[56px] z-10 animate-left-bush"
         />
 
         <img
           src={SunFlower}
           alt=""
-          className="absolute right-[14px] bottom-[16px] w-[82px] z-20"
+          className="absolute right-[14px] bottom-[16px] w-[82px] z-20 animate-left-bush"
         />
 
         <img
           src={TwoRedFlower}
           alt=""
-          className="absolute right-[8px] bottom-[10px] w-[82px] z-30"
+          className="absolute right-[8px] bottom-[10px] w-[82px] z-30 animate-left-bush"
         />
 
       </div>

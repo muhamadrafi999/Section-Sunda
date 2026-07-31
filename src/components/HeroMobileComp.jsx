@@ -1,5 +1,6 @@
 import BgOverlay from "../assets/images/bg-overlay-4.png";
 import Tree from "../assets/images/el-tree-4.png";
+import TreeRotated from "../assets/images/el-tree-4-rotated.png";
 import Bush from "../assets/images/el-bush-1.png";
 import Frame from "../assets/images/frame-3.png";
 import BrideGroom from "../assets/images/picture-bride-groom-1.jpeg";
@@ -15,7 +16,9 @@ function HeroMobileComp() {
 
       <img src={BgOverlay} alt="" className="absolute inset-0 w-full h-full object-cover" />
 
-      <img src={Tree} alt="" className="absolute top-0 -left-8 w-48 z-10" />
+      <img src={Tree} alt="" className="absolute top-18 -left-10 w-39 z-10" />
+      <img src={TreeRotated} alt="" className="absolute top-50 -right-11 w-39 z-10" />
+
 
       <div className="absolute top-24 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
         <p className="font-body text-[18px] text-[#6E4A42]">
@@ -31,9 +34,13 @@ function HeroMobileComp() {
         </p>
       </div>
 
-      <div className="absolute top-[235px] left-1/2 -translate-x-1/2 w-[255px] h-[390px] z-20">
+      <div className="absolute top-[320px] left-1/2 -translate-x-1/2 w-[255px] h-[390px] z-20">
 
-        <img src={Frame} alt="" className="absolute inset-0 w-full h-full z-20" />
+        <img
+          src={Frame}
+          alt=""
+          className="absolute inset-0 w-full h-full z-20"
+        />
 
         <img
           src={BrideGroom}
@@ -76,13 +83,13 @@ function HeroMobileComp() {
       <img
         src={Bush}
         alt=""
-        className="absolute -left-12 bottom-0 w-[430px] z-50"
+        className="absolute -left-30 bottom-0 w-[430px] z-50"
       />
 
       <img
         src={Bush}
         alt=""
-        className="absolute -right-12 bottom-0 w-[430px] scale-x-[-1] z-50"
+        className="absolute -right-30 bottom-0 w-[430px] scale-x-[-1] z-50"
       />
 
     </section>

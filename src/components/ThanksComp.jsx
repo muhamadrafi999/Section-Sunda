@@ -42,25 +42,25 @@ function ThanksComp() {
           <img
             src={BlueFlower}
             alt=""
-            className="absolute left-[3px] top-[88px] w-10 z-20"
+            className="absolute left-[3px] top-[88px] w-10 z-20 animate-left-bush"
           />
 
           <img
             src={SunFlower}
             alt=""
-            className="absolute left-[3px] top-[108px] w-17 z-30"
+            className="absolute left-[3px] top-[108px] w-17 z-30 animate-left-bush"
           />
 
           <img
             src={TwoRedFlower}
             alt=""
-            className="absolute left-[3px] top-[126px] w-13 z-40"
+            className="absolute left-[3px] top-[126px] w-13 z-40 animate-left-bush"
           />
 
           <img
             src={Leaf}
             alt=""
-            className="absolute right-[-24px] bottom-0 w-25 z-50"
+            className="absolute right-[-24px] bottom-0 w-25 z-50 animate-left-bush"
           />
 
         </div>

@@ -19,7 +19,7 @@ function InstagramFilterComp() {
           <img
             src={BgPohon}
             alt=""
-            className="absolute -left-[78px] bottom-1 w-[220px] z-0"
+            className="absolute -left-[78px] bottom-1 w-[220px] z-0 animate-left-flower"
           />
 
           <img
