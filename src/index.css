@@ -145,3 +145,14 @@
 .animate-mobile-open {
   animation: mobileOpen .8s ease forwards;
 }
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

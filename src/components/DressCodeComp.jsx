@@ -24,7 +24,7 @@ function DressCodeComp() {
             <p className="font-body text-[18px] text-[#6B4A3E] mt-3">
               Casual
             </p>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-4 mt-8">
+            <div className="grid grid-cols-2 gap-x-5 gap-y-4 mt-8 mb-8">
               <div className="w-8 h-10 rounded-[999px] bg-[#7A2B2B]"></div>
               <div className="w-8 h-10 rounded-[999px] bg-[#6E8056]"></div>
               <div className="w-8 h-10 rounded-[999px] bg-[#FFF8EA] border border-[#DDD2C5]"></div>
@@ -41,7 +41,7 @@ function DressCodeComp() {
             <p className="font-body text-[18px] text-[#6B4A3E] mt-3">
               Casual
             </p>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-4 mt-8">
+            <div className="grid grid-cols-2 gap-x-5 gap-y-4 mt-8 mb-8">
               <div className="w-8 h-10 rounded-[999px] bg-[#7A2B2B]"></div>
               <div className="w-8 h-10 rounded-[999px] bg-[#6E8056]"></div>
               <div className="w-8 h-10 rounded-[999px] bg-[#FFF8EA] border border-[#DDD2C5]"></div>

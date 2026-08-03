@@ -15,20 +15,38 @@ function InvitationLayout({ children }) {
 
   return (
     <>
-      <div className="hidden lg:flex h-screen bg-[#F7F0DE] overflow-hidden">
-        <div className="flex-1 h-screen sticky top-0 overflow-hidden">
+      <div className="hidden lg:flex fixed inset-0 overflow-hidden bg-[#F7F0DE]">
+
+        <div className="flex-1 relative overflow-hidden">
           <InvitationCover />
         </div>
-        <div className="w-107.5 h-screen overflow-y-auto bg-[#F7F0DE] shadow-2xl border-l border-[#E8DDC9]">
-          <div className="w-97.5 mx-auto bg-[#F7F0DE]">
+
+        <div
+          className="
+            shrink-0
+            w-97.5
+            xl:w-107.5
+            h-full
+            overflow-y-auto
+            overflow-x-hidden
+            scrollbar-hide
+            bg-[#F7F0DE]
+            shadow-2xl
+            border-l
+            border-[#E8DDC9]
+          "
+        >
+          <div className="w-97.5 min-h-full mx-auto bg-[#F7F0DE]">
             {children}
           </div>
         </div>
+
       </div>
-      <div className="lg:hidden overflow-hidden">
+
+      <div className="lg:hidden h-screen overflow-hidden">
         {!isOpen ? (
           <div
-            className={`transition-all duration-700 ${
+            className={`h-full transition-all duration-700 ${
               isClosing
                 ? "opacity-0 scale-95"
                 : "opacity-100 scale-100"
@@ -37,7 +55,7 @@ function InvitationLayout({ children }) {
             <InvitationCover onOpen={handleOpen} />
           </div>
         ) : (
-          <div className="animate-mobile-open">
+          <div className="h-full overflow-y-auto overflow-x-hidden scrollbar-hide animate-mobile-open">
             {children}
           </div>
         )}

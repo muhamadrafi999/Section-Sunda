@@ -20,7 +20,7 @@ function HeroMobileComp() {
         <p className="font-body text-[18px] text-[#6E4A42]">
           Wedding Invitation
         </p>
-        <h1 className="font-title text-[44px] text-[#6C2E37] mt-2">
+        <h1 className="font-title text-[35px] text-[#6C2E37] mt-2">
           Bryan & Anne
         </h1>
         <p className="font-body text-[18px] text-[#6E4A42] mt-2">
