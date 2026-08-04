@@ -5,6 +5,13 @@ import YellowFlower from "../assets/images/el-flower-25-rotated.png";
 import BlueFlower from "../assets/images/el-flower-20-rotated.png";
 
 function AkadComp() {
+  const handleOpenMaps = () => {
+    window.open(
+      "https://www.google.com/maps/search/?api=1&query=The+St.+Regis+Jakarta,+Rajawali+Place,+Jl.+H.R.+Rasuna+Said+No.4,+Jakarta+Selatan",
+      "_blank"
+    );
+  };
+
   return (
     <section className="bg-[#F7F0DE] py-7 flex justify-center overflow-hidden">
       <div className="relative w-97.5 h-210 flex flex-col items-center">
@@ -30,7 +37,7 @@ function AkadComp() {
           </div>
         </div>
         <h1 className="font-title text-[42px] text-[#7B3B3B] mt-20">
-            Akad Nikah
+          Akad Nikah
         </h1>
         <p className="font-body text-[21px] font-semibold text-[#6B4A3E] mt-6">
           Senin 20 Januari 2025
@@ -51,7 +58,10 @@ function AkadComp() {
           <br />
           No.4 Blok Kav. B
         </p>
-        <button className="mt-7 w-46.25 h-11 rounded-full bg-[#7D2424] text-white font-body text-[18px] z-50">
+        <button
+          onClick={handleOpenMaps}
+          className="mt-7 w-46.25 h-11 rounded-full bg-[#7D2424] text-white font-body text-[18px] z-50 hover:scale-105 duration-300 cursor-pointer"
+        >
           Lihat Peta
         </button>
         <img

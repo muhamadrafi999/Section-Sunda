@@ -14,38 +14,55 @@ function DressCodeComp() {
           Tambahkan kalimat
         </p>
         <div className="flex gap-4">
-          <div className="w-40 h-75 rounded-3xl bg-[#EEDDCB] shadow-[0_0_12px_rgba(0,0,0,.18)] flex flex-col items-center pt-6">
-            <h2 className="font-body text-[22px] text-[#6B4A3E]">
-              Pria
-            </h2>
-            <div className="w-17 h-17 rounded-full bg-white flex items-center justify-center mt-5">
-              <img src={CasualDressMen} alt="" className="w-10" />
+          <div className="w-40 h-[315px] rounded-3xl bg-[#EEDDCB] shadow-[0_0_12px_rgba(0,0,0,.18)] px-6 py-6 flex flex-col">
+
+            <div className="flex flex-col items-center">
+              <h2 className="font-body text-[22px] text-[#6B4A3E]">
+                Pria
+              </h2>
+              <div className="w-17 h-17 rounded-full bg-white flex items-center justify-center mt-5">
+                <img
+                  src={CasualDressMen}
+                  alt=""
+                  className="w-10 h-auto object-contain"
+                />
+              </div>
+              <p className="font-body text-[18px] text-[#6B4A3E] mt-3 mb-5">
+                Casual
+              </p>
             </div>
-            <p className="font-body text-[18px] text-[#6B4A3E] mt-3">
-              Casual
-            </p>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-4 mt-8 mb-8">
-              <div className="w-8 h-10 rounded-[999px] bg-[#7A2B2B]"></div>
-              <div className="w-8 h-10 rounded-[999px] bg-[#6E8056]"></div>
-              <div className="w-8 h-10 rounded-[999px] bg-[#FFF8EA] border border-[#DDD2C5]"></div>
-              <div className="w-8 h-10 rounded-[999px] bg-black"></div>
+            <div className="mt-auto pb-2 flex justify-center">
+              <div className="grid grid-cols-2 gap-x-5 gap-y-4">
+                <div className="w-8 h-10 rounded-full bg-[#7A2B2B]"></div>
+                <div className="w-8 h-10 rounded-full bg-[#6E8056]"></div>
+                <div className="w-8 h-10 rounded-full bg-[#FFF8EA] border border-[#DDD2C5]"></div>
+                <div className="w-8 h-10 rounded-full bg-black"></div>
+              </div>
             </div>
           </div>
-          <div className="w-40 h-75 rounded-3xl bg-[#EEDDCB] shadow-[0_0_12px_rgba(0,0,0,.18)] flex flex-col items-center pt-6">
-            <h2 className="font-body text-[22px] text-[#6B4A3E]">
-              Wanita
-            </h2>
-            <div className="w-17 h-17 rounded-full bg-white flex items-center justify-center mt-5">
-              <img src={CasualDressWoman} alt="" className="w-10" />
+          <div className="w-40 h-[315px] rounded-3xl bg-[#EEDDCB] shadow-[0_0_12px_rgba(0,0,0,.18)] px-6 py-6 flex flex-col">
+            <div className="flex flex-col items-center">
+              <h2 className="font-body text-[22px] text-[#6B4A3E]">
+                Wanita
+              </h2>
+              <div className="w-17 h-17 rounded-full bg-white flex items-center justify-center mt-5">
+                <img
+                  src={CasualDressWoman}
+                  alt=""
+                  className="w-10 h-auto object-contain"
+                />
+              </div>
+              <p className="font-body text-[18px] text-[#6B4A3E] mt-3 mb-5">
+                Casual
+              </p>
             </div>
-            <p className="font-body text-[18px] text-[#6B4A3E] mt-3">
-              Casual
-            </p>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-4 mt-8 mb-8">
-              <div className="w-8 h-10 rounded-[999px] bg-[#7A2B2B]"></div>
-              <div className="w-8 h-10 rounded-[999px] bg-[#6E8056]"></div>
-              <div className="w-8 h-10 rounded-[999px] bg-[#FFF8EA] border border-[#DDD2C5]"></div>
-              <div className="w-8 h-10 rounded-[999px] bg-black"></div>
+            <div className="mt-auto pb-2 flex justify-center">
+              <div className="grid grid-cols-2 gap-x-5 gap-y-4">
+                <div className="w-8 h-10 rounded-full bg-[#7A2B2B]"></div>
+                <div className="w-8 h-10 rounded-full bg-[#6E8056]"></div>
+                <div className="w-8 h-10 rounded-full bg-[#FFF8EA] border border-[#DDD2C5]"></div>
+                <div className="w-8 h-10 rounded-full bg-black"></div>
+              </div>
             </div>
           </div>
         </div>

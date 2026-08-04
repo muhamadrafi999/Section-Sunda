@@ -17,28 +17,25 @@ function InvitationLayout({ children }) {
     <>
       <div className="hidden lg:flex fixed inset-0 overflow-hidden bg-[#F7F0DE]">
 
-        <div className="flex-1 relative overflow-hidden">
+        <div className="flex-1 min-w-0 relative overflow-hidden">
           <InvitationCover />
         </div>
 
         <div
           className="
             shrink-0
-            w-97.5
-            xl:w-107.5
+            w-[390px]
+            xl:w-[430px]
             h-full
             overflow-y-auto
             overflow-x-hidden
             scrollbar-hide
             bg-[#F7F0DE]
-            shadow-2xl
             border-l
             border-[#E8DDC9]
           "
         >
-          <div className="w-97.5 min-h-full mx-auto bg-[#F7F0DE]">
-            {children}
-          </div>
+          {children}
         </div>
 
       </div>

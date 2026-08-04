@@ -5,6 +5,13 @@ import RightTallFlower from "../assets/images/right-tall-flower.png";
 import BottomLeftFlower from "../assets/images/bottom-left-flowerr.png";
 
 function InstagramFilterComp() {
+  const handleOpenFilter = () => {
+    window.open(
+      "https://www.instagram.com/ar/123456789012345/",
+      "_blank"
+    );
+  };
+
   return (
     <section className="bg-[#F7F0DE] py-16 flex justify-center">
       <div className="w-97.5 flex flex-col items-center">
@@ -38,7 +45,10 @@ function InstagramFilterComp() {
             className="absolute -right-7 bottom-0 w-18.5 z-20 animate-tall-flower"
           />
         </div>
-        <button className="mt-10 w-57.5 h-10.5 rounded-full bg-[#7D2424] text-white font-body text-[19px]">
+        <button
+          onClick={handleOpenFilter}
+          className="mt-10 w-57.5 h-10.5 rounded-full bg-[#7D2424] text-white font-body text-[19px] hover:scale-105 duration-300 cursor-pointer"
+        >
           Gunakan
         </button>
       </div>

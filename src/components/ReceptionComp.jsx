@@ -5,6 +5,12 @@ import TwoRedFlower from "../assets/images/two-red-flower.png";
 import SunFlower from "../assets/images/sun-flower.png";
 
 function ReceptionComp() {
+  const handleOpenMaps = () => {
+    window.open(
+      "https://www.google.com/maps/search/?api=1&query=The+St.+Regis+Jakarta,+Rajawali+Place,+Jl.+H.R.+Rasuna+Said+No.4,+Jakarta+Selatan",
+      "_blank"
+    );
+  };
   return (
     <section className="bg-[#F7F0DE] py-16 flex justify-center overflow-hidden">
       <div className="relative w-97.5 h-135 flex flex-col items-center">
@@ -30,7 +36,10 @@ function ReceptionComp() {
           <br />
           No.4 Blok Kav. B
         </p>
-        <button className="mt-9 w-46.25 h-11 rounded-full bg-[#7D2424] text-white font-body text-[18px]">
+        <button 
+          onClick={handleOpenMaps}
+          className="mt-9 w-46.25 h-11 rounded-full bg-[#7D2424] text-white font-body text-[18px] cursor-pointer"
+        >
           Lihat Peta
         </button>
         <img

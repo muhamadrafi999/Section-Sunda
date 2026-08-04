@@ -5,6 +5,16 @@ import FlowerRight from "../assets/images/el-flower-22-rotated.png";
 import Pattern from "../assets/images/el-pattern-3.png";
 
 function CountdownComp() {
+  const handleAddCalendar = () => {
+    const url =
+      "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+      "&text=Wedding+Bryan+%26+Anne" +
+      "&dates=20270115T090000Z/20270115T120000Z" +
+      "&details=Wedding+Invitation+Bryan+%26+Anne" +
+      "&location=Indonesia";
+    window.open(url, "_blank");
+  };
+
   return (
     <section className="bg-[#F7F0DE] pt-24 pb-6 flex justify-center overflow-hidden">
       <div className="relative w-97.5 h-135 flex justify-center">
@@ -50,7 +60,10 @@ function CountdownComp() {
               </p>
             </div>
           </div>
-          <button className="mt-6 w-36.25 h-7 rounded-full bg-[#7D2424] text-white font-body text-[12px]">
+          <button
+            onClick={handleAddCalendar}
+            className="mt-6 w-36.25 h-7 rounded-full bg-[#7D2424] text-white font-body text-[12px] hover:scale-105 duration-300 cursor-pointer"
+          >
             Tambah ke Kalender
           </button>
         </div>

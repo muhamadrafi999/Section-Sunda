@@ -12,7 +12,7 @@ import ManyFlower from "../assets/images/many-left-flowerr.png";
 
 function InvitationCover({ onOpen }) {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#F7F0DE]">
+    <section className="relative w-full h-full overflow-hidden bg-[#F7F0DE]">
       <img
         src={Bg}
         alt=""
