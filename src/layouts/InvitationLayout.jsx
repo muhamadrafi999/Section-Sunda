@@ -16,11 +16,9 @@ function InvitationLayout({ children }) {
   return (
     <>
       <div className="hidden lg:flex fixed inset-0 overflow-hidden bg-[#F7F0DE]">
-
         <div className="flex-1 min-w-0 relative overflow-hidden">
           <InvitationCover />
         </div>
-
         <div
           className="
             shrink-0
@@ -37,9 +35,7 @@ function InvitationLayout({ children }) {
         >
           {children}
         </div>
-
       </div>
-
       <div className="lg:hidden h-screen overflow-hidden">
         {!isOpen ? (
           <div

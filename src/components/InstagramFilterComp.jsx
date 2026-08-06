@@ -15,7 +15,7 @@ function InstagramFilterComp() {
   return (
     <section className="bg-[#F7F0DE] py-16 flex justify-center">
       <div className="w-97.5 flex flex-col items-center">
-        <h1 className="font-title text-[42px] text-[#7B3B3B] text-center">
+        <h1 className="font-title text-[34px] text-[#7B3B3B] text-center">
           Instagram Wedding Filter
         </h1>
         <div className="relative w-55 h-83.75 mt-10">

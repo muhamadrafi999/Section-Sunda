@@ -15,7 +15,7 @@ function AkadComp() {
   return (
     <section className="bg-[#F7F0DE] py-7 flex justify-center overflow-hidden">
       <div className="relative w-97.5 h-210 flex flex-col items-center">
-        <h2 className="font-title text-[42px] text-[#7B3B3B]">
+        <h2 className="font-title text-[35px] text-[#7B3B3B]">
           It's Wedding Day
         </h2>
         <div className="mt-8 w-77.5 h-28.75 rounded-[22px] bg-[#EEDDCB] shadow-[0_2px_10px_rgba(0,0,0,0.18)] flex flex-col items-center justify-center">
