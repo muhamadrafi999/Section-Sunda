@@ -1,3 +1,5 @@
+import { useMusic } from "../context/MusicContext";
+
 import Bg from "../assets/images/bg-overlay-4.png";
 import LeftTree from "../assets/images/el-tree-4.png";
 import RightTree from "../assets/images/el-tree-4-rotated.png";
@@ -11,6 +13,16 @@ import Flower13 from "../assets/images/el-flower-13.png";
 import ManyFlower from "../assets/images/many-left-flowerr.png";
 
 function InvitationCover({ onOpen }) {
+  const { openInvitation } = useMusic();
+
+  const handleOpenInvitation = () => {
+    openInvitation();
+
+    if (onOpen) {
+      onOpen();
+    }
+  };
+
   return (
     <section className="relative w-full h-full overflow-hidden bg-[#F7F0DE]">
       <img
@@ -79,7 +91,7 @@ function InvitationCover({ onOpen }) {
           #PromDateToLifeMate
         </p>
         <button
-          onClick={onOpen}
+          onClick={handleOpenInvitation}
           className="lg:hidden mt-12 w-47.5 h-11.5 rounded-full bg-[#7B2A2A] text-white font-body text-[15px] shadow-lg hover:scale-105 duration-300"
         >
           Buka Undangan

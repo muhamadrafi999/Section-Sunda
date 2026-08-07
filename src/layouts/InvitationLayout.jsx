@@ -22,8 +22,8 @@ function InvitationLayout({ children }) {
         <div
           className="
             shrink-0
-            w-[390px]
-            xl:w-[430px]
+            w-97.5
+            xl:w-107.5
             h-full
             overflow-y-auto
             overflow-x-hidden

@@ -156,3 +156,17 @@
     display: none;
   }
 }
+
+@keyframes musicSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-music-spin {
+  animation: musicSpin 3s linear infinite;
+}
