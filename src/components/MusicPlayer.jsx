@@ -92,7 +92,7 @@ function MusicPlayer() {
             alt=""
             className={`
               absolute
-              -right-3
+              -right-5
               -top-1
               w-10
               h-15
@@ -103,8 +103,8 @@ function MusicPlayer() {
               ease-in-out
               ${
                 isPlaying
-                  ? "rotate-[18deg]"
-                  : "rotate-[-8deg]"
+                  ? "rotate-[9deg]"
+                  : "rotate-[-6deg]"
               }
             `}
           />

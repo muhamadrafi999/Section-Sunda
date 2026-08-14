@@ -82,6 +82,28 @@ function WishComp() {
 
   useEffect(() => {
     fetchWishes();
+
+    const handleAttendanceWish = (event) => {
+      const newWish = event.detail;
+
+      if (!newWish?.name || !newWish?.message) {
+        return;
+      }
+
+      setWishes((prev) => [newWish, ...prev]);
+    };
+
+    window.addEventListener(
+      "attendanceWishAdded",
+      handleAttendanceWish
+    );
+
+    return () => {
+      window.removeEventListener(
+        "attendanceWishAdded",
+        handleAttendanceWish
+      );
+    };
   }, []);
 
   const handleSubmit = async () => {
