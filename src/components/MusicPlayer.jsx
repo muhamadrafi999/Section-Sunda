@@ -103,7 +103,7 @@ function MusicPlayer() {
               ease-in-out
               ${
                 isPlaying
-                  ? "rotate-[18deg]"
+                  ? "rotate-5"
                   : "rotate-[-8deg]"
               }
             `}

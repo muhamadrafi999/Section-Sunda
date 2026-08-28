@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Pattern from "../assets/images/el-pattern-3.png";
 import FrameBg from "../assets/images/bg-overlay-4.png";
+import { Alert, AlertDescription } from "../components/ui/alert";
 
 const API_URL =
   "https://script.google.com/macros/s/AKfycbwlt07CjQbBMQecjpc1s-pzmwgYYhL6rur7dgKnbSFjBc_tE1jTnuGaaSVXQDzA0Z-p/exec";
@@ -10,6 +11,11 @@ function WishComp() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const [alert, setAlert] = useState({
+    show: false,
+    message: "",
+  });
 
   const [wishes, setWishes] = useState([
     {
@@ -38,6 +44,55 @@ function WishComp() {
     },
   ]);
 
+  const getWishTimestamp = (wish) => {
+    const timestamp =
+      wish.Timestamp ||
+      wish.timestamp ||
+      wish.CreatedAt ||
+      wish.createdAt ||
+      wish.Date ||
+      wish.date ||
+      wish.Time ||
+      wish.time ||
+      null;
+
+    if (!timestamp) {
+      return null;
+    }
+
+    const time = new Date(timestamp).getTime();
+
+    return Number.isNaN(time) ? null : time;
+  };
+
+  const sortWishes = (wishList) => {
+    return [...wishList].sort((a, b) => {
+      const timeA = getWishTimestamp(a);
+      const timeB = getWishTimestamp(b);
+
+      if (timeA !== null && timeB !== null) {
+        return timeB - timeA;
+      }
+
+      if (timeA !== null && timeB === null) {
+        return -1;
+      }
+
+      if (timeA === null && timeB !== null) {
+        return 1;
+      }
+
+      const idA = Number(a.id);
+      const idB = Number(b.id);
+
+      if (!Number.isNaN(idA) && !Number.isNaN(idB)) {
+        return idB - idA;
+      }
+
+      return 0;
+    });
+  };
+
   const fetchWishes = async () => {
     try {
       const response = await fetch(`${API_URL}?table=Wishes`);
@@ -58,23 +113,62 @@ function WishComp() {
 
       const formattedWishes = apiWishes
         .filter((wish) => wish.Name || wish.name)
-        .map((wish, index) => ({
-          id: wish.ID || wish.id || `api-${index}`,
-          name: wish.Name || wish.name,
-          message: wish.Message || wish.message,
-        }));
+        .map((wish, index) => {
+          const timestamp =
+            wish.Timestamp ||
+            wish.timestamp ||
+            wish.CreatedAt ||
+            wish.createdAt ||
+            wish.Date ||
+            wish.date ||
+            wish.Time ||
+            wish.time ||
+            null;
 
-      if (formattedWishes.length > 0) {
-        setWishes((prev) => {
-          const defaultNames = ["Bibah", "Sissy", "Halma", "Salsa"];
+          return {
+            id: wish.ID || wish.id || `api-${index}`,
+            name: wish.Name || wish.name,
+            message: wish.Message || wish.message,
+            timestamp,
+          };
+        });
 
-          const defaultWishes = prev.filter((wish) =>
-            defaultNames.includes(wish.name)
+      setWishes((prev) => {
+        const defaultNames = ["Bibah", "Sissy", "Halma", "Salsa"];
+
+        const defaultWishes = prev.filter((wish) =>
+          defaultNames.includes(wish.name)
+        );
+
+        const previousApiWishes = prev.filter(
+          (wish) => !defaultNames.includes(wish.name)
+        );
+
+        const mergedWishes = formattedWishes.map((apiWish) => {
+          const oldWish = previousApiWishes.find(
+            (old) => String(old.id) === String(apiWish.id)
           );
 
-          return [...formattedWishes, ...defaultWishes];
+          return {
+            ...apiWish,
+            timestamp: apiWish.timestamp || oldWish?.timestamp || null,
+          };
         });
-      }
+
+        const apiIds = new Set(
+          mergedWishes.map((wish) => String(wish.id))
+        );
+
+        const localWishesNotInApi = previousApiWishes.filter(
+          (wish) => !apiIds.has(String(wish.id))
+        );
+
+        return sortWishes([
+          ...mergedWishes,
+          ...localWishesNotInApi,
+          ...defaultWishes,
+        ]);
+      });
     } catch (error) {
       console.error("Gagal mengambil wishes:", error);
     }
@@ -89,13 +183,18 @@ function WishComp() {
     const newMessage = message.trim();
 
     if (!newName || !newMessage) {
-      alert("Silakan isi nama dan ucapan.");
+      setAlert({
+        show: true,
+        message: "Silakan isi nama dan ucapan.",
+      });
       return;
     }
 
     setLoading(true);
 
     try {
+      const submittedAt = new Date().toISOString();
+
       const response = await fetch(API_URL, {
         method: "POST",
         headers: {
@@ -120,22 +219,30 @@ function WishComp() {
         id: result.id || Date.now(),
         name: newName,
         message: newMessage,
+        timestamp: submittedAt,
       };
 
-      setWishes((prev) => [newWish, ...prev]);
+      setWishes((prev) => {
+        return sortWishes([newWish, ...prev]);
+      });
 
       setName("");
       setMessage("");
 
-      alert("Ucapan berhasil dikirim!");
+      setAlert({
+        show: true,
+        message: "Ucapan berhasil dikirim!",
+      });
 
       await fetchWishes();
     } catch (error) {
       console.error("Gagal mengirim wishes:", error);
 
-      alert(
-        "Ucapan gagal dikirim. Periksa koneksi API atau Google Apps Script."
-      );
+      setAlert({
+        show: true,
+        message:
+          "Ucapan gagal dikirim. Periksa koneksi API atau Google Apps Script.",
+      });
     } finally {
       setLoading(false);
     }
@@ -143,6 +250,27 @@ function WishComp() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#F7F0DF]">
+      {alert.show && (
+        <div className="fixed top-5 left-1/2 z-[9999] w-[calc(100%-32px)] max-w-[396px] -translate-x-1/2">
+          <Alert className="relative bg-white shadow-lg">
+            <AlertDescription className="pr-6 text-[#7B2A2A]">
+              {alert.message}
+            </AlertDescription>
+            <button
+              type="button"
+              onClick={() =>
+                setAlert({
+                  show: false,
+                  message: "",
+                })
+              }
+              className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-[20px] leading-none text-[#7B2A2A]"
+            >
+              ×
+            </button>
+          </Alert>
+        </div>
+      )}
       <img
         src={Pattern}
         alt=""
