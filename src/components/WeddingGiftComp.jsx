@@ -139,7 +139,7 @@ function WeddingGiftComp() {
   return (
     <>
       {alertMessage && (
-        <div className="fixed top-5 left-1/2 z-[9999] w-[calc(100%-32px)] max-w-[396px] -translate-x-1/2">
+        <div className="fixed top-5 left-1/2 z-9999 w-[calc(100%-32px)] max-w-99 -translate-x-1/2">
           <Alert className="relative bg-white shadow-lg">
             <AlertDescription className="pr-6 text-[#7B2A2A]">
               {alertMessage}
@@ -282,7 +282,7 @@ function WeddingGiftComp() {
         </div>
       </section>
       {showQris && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center px-5">
+        <div className="fixed inset-0 z-9999 bg-black/60 flex items-center justify-center px-5">
           <div className="relative w-80 max-w-full rounded-2xl bg-white p-5 shadow-2xl">
             <button
               type="button"

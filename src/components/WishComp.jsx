@@ -251,7 +251,7 @@ function WishComp() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#F7F0DF]">
       {alert.show && (
-        <div className="fixed top-5 left-1/2 z-[9999] w-[calc(100%-32px)] max-w-[396px] -translate-x-1/2">
+        <div className="fixed top-5 left-1/2 z-9999 w-[calc(100%-32px)] max-w-99 -translate-x-1/2">
           <Alert className="relative bg-white shadow-lg">
             <AlertDescription className="pr-6 text-[#7B2A2A]">
               {alert.message}
@@ -276,15 +276,15 @@ function WishComp() {
         alt=""
         className="absolute bottom-165 left-1/2 -translate-x-1/2 w-71.25 z-30"
       />
-      <div className="relative z-10 flex min-h-screen flex-col items-center pt-[145px]">
-        <div className="absolute top-[105px] left-1/2 h-[650px] w-[330px] -translate-x-1/2 overflow-hidden rounded-t-[165px] rounded-b-[35px]">
+      <div className="relative z-10 flex min-h-screen flex-col items-center pt-36.25">
+        <div className="absolute top-26.25 left-1/2 h-162.5 w-82.5 -translate-x-1/2 overflow-hidden rounded-t-[165px] rounded-b-[35px]">
           <img
             src={FrameBg}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="relative z-20 flex w-[300px] flex-col items-center">
+        <div className="relative z-20 flex w-75 flex-col items-center">
           <h2 className="font-title text-[30px] text-[#7B3030]">
             Harapan dan Ucapan
           </h2>
@@ -309,7 +309,7 @@ function WishComp() {
             {loading ? "Mengirim..." : "Kirim"}
           </button>
           <div className="mt-4 mb-2 w-full rounded-[15px] bg-[#7B2A2A] px-3 py-3">
-            <div className="h-[300px] overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-[#C9A6A6] scrollbar-track-transparent">
+            <div className="h-75 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-[#C9A6A6] scrollbar-track-transparent">
               <div className="flex flex-col gap-3">
                 {wishes.map((wish, index) => (
                   <div
@@ -319,7 +319,7 @@ function WishComp() {
                     <h3 className="font-body text-[13px] font-semibold text-[#7B2A2A]">
                       {wish.name}
                     </h3>
-                    <p className="mt-1 font-body text-[11px] leading-[1.5] text-[#5C4036]">
+                    <p className="mt-1 font-body text-[11px] leading-normal text-[#5C4036]">
                       {wish.message}
                     </p>
                   </div>
